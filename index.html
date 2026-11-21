@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>my love</title>
+  <style>
+    body {
+      background-color: rgb(248, 146, 163);
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.8;
+    }
+
+    button {
+      background-color: white;
+      color: hotpink;
+      font-size: 18px;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    @keyframes moveUp {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      animation: moveUp 4s linear forwards;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ILOVE YA MOODY</h1>
+  <h2>you're the most precious person in my life i've become so dependent on you for everything my husband.</h2>
+
+  <button onclick="alert('ILOVE YOU YA MOODY')">click here ya motshy♥️</button>
+
+  <script>
+    function createheart() {
+      let heart = document.createElement("div");
+      heart.innerHTML = "♥️";
+      heart.className = "heart";
+      heart.style.left = (Math.random() * 100) + "vw";
+      heart.style.fontSize = (20 + Math.random() * 20) + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(function () {
+        heart.remove();
+      }, 4000);
+    }
+
+    for (let i = 0; i < 30; i++) {
+setTimeout (createheart,i *150);}
+</script>
+</body>
+</html>
